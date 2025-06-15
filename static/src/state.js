@@ -11,6 +11,12 @@ function getState() {
     return state
 }
 
+function setAndLoad(state)
+{
+    setState(state)
+    loadStateMenu()
+}
+
 function setState(state) {
     fsmState = state
 }
@@ -25,6 +31,10 @@ function loadStateMenu() {
         .then(data => {
             menuContent.innerHTML = data
             menuContent.style.animation = "fadeInUp 1s ease"
+            // if(fsmState=="SIGNOUT")
+            // {
+            //     activateQR()
+            // }
         })
         .catch(error => {
             console.error('Error loading HTML:', error);
