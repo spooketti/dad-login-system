@@ -8,3 +8,4 @@ for(let i=0;i<6;i++)
     document.getElementById("background").appendChild(square)
     
 }
+loadStateMenu()
