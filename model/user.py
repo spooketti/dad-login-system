@@ -1,19 +1,19 @@
 from init import db, app
-import time
-
+from datetime import datetime
+from flask import jsonify
 class Users(db.Model):
     __tablename__ = "users"
-    gmail = db.Column(db.Text, unique=True)
+    gmail = db.Column(db.Text)
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.Text)
     company = db.Column(db.Text)
     visitTarget = db.Column(db.Text)
-    checkInDate = db.Column(db.Text,default=time.time())
-    checkOutDate = db.Column(db.Text,default=None)
+    checkInDate = db.Column(db.Text,default=datetime.now())
+    checkOutDate = db.Column(db.Text,default="-1")
     
-    def update(self, gmail,name,company,visitTarget,checkIn,checkOut):
-        
-        return "Success"
+    def signout(self):
+        self.checkOutDate = datetime.now()
+        return "good"
       
     
 def initUserTable():
