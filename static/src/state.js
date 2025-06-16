@@ -1,6 +1,7 @@
 const State = {
     HOME: "HOME",
     SIGNUP: "SIGNUP",
+    SIGNOUT:"SIGNOUT"
 }
 
 let menuContent = document.getElementById("MenuContent")
@@ -11,8 +12,7 @@ function getState() {
     return state
 }
 
-function setAndLoad(state)
-{
+function setAndLoad(state) {
     setState(state)
     loadStateMenu()
 }
@@ -29,8 +29,14 @@ function loadStateMenu() {
             return response.text();
         })
         .then(data => {
-            menuContent.innerHTML = data
-            menuContent.style.animation = "fadeInUp 1s ease"
+            menuContent.innerHTML = data;
+            menuContent.style.display = "none";
+            menuContent.style.animation = "none"; 
+
+            void menuContent.offsetHeight; //dom reflow
+
+            menuContent.style.display = "block";
+            menuContent.style.animation = "fadeInUp 1s ease";
             // if(fsmState=="SIGNOUT")
             // {
             //     activateQR()

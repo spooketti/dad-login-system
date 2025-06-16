@@ -69,3 +69,93 @@ html, body {
       transform: translateY(0);
     }
   }
+
+#formDiv
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#formDiv input
+{
+  width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #444444;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+#CompleteSignup
+{
+    position: relative;
+    left: 0;
+    top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+}
+
+#CompleteSignup button
+{
+    aspect-ratio: 1 / 1;
+    width: 35%;
+    font-size: 3rem;
+}
+
+#CompleteSignup button span
+{
+    font-size: 3rem;
+}
+
+#SignoutMenu
+{
+    position: relative;
+    left: 0;
+    top: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+}
+
+#SignoutMenu button
+{
+    aspect-ratio: 1 / 1;
+    width: 35%;
+    font-size: 3rem;
+}
+
+#SignoutMenu button span
+{
+    font-size: 3rem;
+}
+
+#leaveForm
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#leaveForm input
+{
+  width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #444444;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-family: "Nunito Sans", sans-serif;
+}

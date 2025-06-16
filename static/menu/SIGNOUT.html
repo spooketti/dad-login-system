@@ -5,5 +5,17 @@
     </div>
 </div> -->
 <div>
-    <div><input placeholder="Enter your email you entered with" type="text" autocomplete="false"></div>
+    <h1 class="title">Enter Your Email</h1>
+    <div id="leaveForm">
+    <input type="text" placeholder="Email" id="formEmail">
+
+    </div>
+    <div id="SignoutMenu">
+        <button id="ConfirmAccept" onclick="signout();setAndLoad('HOME')">Confirm<br><span class="material-symbols-outlined">
+                person_add
+            </span></button>
+        <button id="ConfirmCancel" onclick="setAndLoad('HOME')">Cancel<br><span class="material-symbols-outlined">
+                hand_gesture
+            </span></button>
+    </div>
 </div>
